@@ -1,0 +1,19 @@
+$navcolor:   yellow;
+.menucenter a {
+    color: $navcolor;
+}
+
+$hovernavcolor:  white;
+.menucenter a:hover{
+    color: $hovernavcolor;
+}
+
+$buttncolor: red;
+
+button{
+    background-color: $buttncolor;
+    text-transform:uppercase;
+    & ::after{
+        text-transform: uppercase;
+    } 
+}

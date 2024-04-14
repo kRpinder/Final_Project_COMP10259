@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/contactstyle.css">
+    <link rel="stylesheet" href="contstyle.css">
+</head>
+<body>
+    <form id="contactForm" action="https://formspree.io/f/mkndpoar" method="POST"
+        onsubmit="sendEmail(); reset(); return false" />
+        <header><p>Contact Form</p></header>
+        <hr>
+        <h3>Please enter your details and messages in the Contact form given below</h6>
+
+          <div class="row50">
+            <div class="Namebox">
+              <span>First Name:</span>
+              <input type="text" placeholder="Enter your Firstname"name="firstName" id="firstName" onchange="return fNameValidation()" required />
+            </div>
+            <div class="Namebox">
+              <span>Last Name:</span>
+              <input type="text" placeholder="Enter Your Lastname" name="lastName"id="lastName" onchange="return lNameValidation()" required />
+            </div>
+          </div>
+          <div class="row50">
+            <div class="Namebox">
+              <span>Email:</span>
+              <input style="margin-left: 40px;" type="text"name="email" placeholder="username@email.com" id="email" onchange="return emailValidation()"
+               required />
+            </div>
+            <div class="Namebox">
+              <span>Mobile:</span>
+              <input style="margin-left: 32px;"type="text" name="mobile" placeholder="Enter your Phone Number" id="phone" onchange="return phoneValidation()"
+               required />
+            </div>
+          </div>
+          <div class="row100">
+            <div class="Namebox">
+              <span>Date:</span>
+              <input style="text-align: center; margin-left: 45px;" name="date" type="text" placeholder="Date(dd/mm/yy)" id="Date" onchange="return dateValidation()"
+                required />
+            </div>
+            <div class="Namebox">
+              <span>Message:</span><br><br>
+              <textarea placeholder="Write your message here_" name="message" id="message" onchange="return msgValidation()"
+               required></textarea>
+            </div>
+          </div>
+          <div>
+              <button type="submit" value="Send">SUBMIT</button>
+          </div>
+    </form>
+
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+          const firstName = document.getElementById("firstName").value;
+          const lastName = document.getElementById("lastName").value;
+          const email = document.getElementById("email").value;
+          const Date = document.getElementById("Date").value;
+          const phone = document.getElementById("phone").value;
+          const message = document.getElementById("message").value;
+        function firstName(){
+          if (firstName.length < 5) {
+            alert("First name should be at least 5 characters.");
+            event.preventDefault();
+            }
+          }
+        function lastName(){
+          if (lastName.length < 5) {
+            alert("Last name should be at least 5 characters.");
+            event.preventDefault();
+          }
+        }
+        function email(){
+          if (!email.includes("@")) {
+            alert("Email must contain the '@' symbol.");
+            event.preventDefault();
+          }
+        }
+        function Date(){
+          if (!/\d{2}\/\d{2}\/\d{2}/.test(Date)) {
+            alert("Date must have the format dd/mm/yy.");
+            event.preventDefault();
+          }
+        }
+        function phone(){
+          if (!/^\d{10}$/.test(phone)) {
+            alert("Phone must contain 10 digits.");
+            event.preventDefault();
+          }
+        }
+        function message(){
+          if (message.length < 50) {
+          alert("Message must be at least 50 characters.");
+          event.preventDefault();
+        }}
+        });
+    </script>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+          Host : "smtp.gmail.com",
+          Username : "kaurrupinder51061@gmail.com",
+          Password : "617437B12025B3E10F0A595226B6FB136986",
+          To : 'kaurrupinder51061@gmail.com',
+          From : "kaurrupinder51061@gmail.com",
+          Subject : "A new query",
+          Body : "Date: " + document.getElementById("Date").value
+          + "<br> Name:" + document.getElementById("firstName").value + document.getElementById("lastName").value
+          + "<br> Email: " + document.getElementById("Email").value
+          + "<br> Phone Number : " + document.getElementById("Phone").value
+          + "<br> Message : " + document.getElementById("Message").value
+      }).then(
+        message => alert(message)
+      );
+      }
+    </script>
+
+</body>
+</html>

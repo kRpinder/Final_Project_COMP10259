@@ -1,0 +1,15 @@
+.menucenter a {
+  color: yellow;
+}
+
+.menucenter a:hover {
+  color: white;
+}
+
+button {
+  background-color: red;
+  text-transform: uppercase;
+}
+button ::after {
+  text-transform: uppercase;
+}/*# sourceMappingURL=indexstyle.css.map */

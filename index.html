@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Life of a Whale</title>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="indexstyle.css">
+</head>
+<body>		
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div>
+	<div class="slideshow">
+		<span class="close">&times;</span>
+		<div class="slideshow-content"></div>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+		$(window).scroll(function() {
+		if ($(window).scrollTop() > 50) {
+			$('.tophead').addClass('fixed');
+		} else {
+		$('.tophead').removeClass('fixed');
+		}
+	});
+});
+</script>
+	
+<script>
+		$(document).ready(function() {
+			$('.galleryimage img').click(function() {
+				const src = $(this).attr('src');
+				$('.slideshow-content').html('<img src="' + src + '">');
+				$('.slideshow').fadeIn();
+			});
+	
+			$('.slideshow, .close').click(function() {
+				$('.slideshow').fadeOut();
+			});
+	
+			$('.slideshow-content').click(function(event) {
+				event.stopPropagation();
+			});
+		});
+</script>
+<script>
+	$(document).ready(function(){
+		$('.video video').click(function(){
+			const src = $(this).attr('src');
+				$('.slideshow-content').html('<video src="' + src + '"controls muted loop>');
+				$('.slideshow').fadeIn();
+			});
+	
+			$('.slideshow, .close').click(function() {
+				$('.slideshow').fadeOut();
+			});
+	
+			$('.slideshow-content').click(function(event) {
+				event.stopPropagation();
+		});
+	});
+</script>
+<div class= "container">				
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="brandcenter">
+						<h1>
+								<a href="#">Life of a Whale</a>
+						</h1>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="menucenter">
+								<a href="#home1">Home</a>
+								<a href="#aboutus1">About Us</a>
+								<a href="#gallery1">Gallery</a>
+								<a href="#faq1">FAQ</a>
+								<a href="ContactUs.html">Contact</a>
+								<a href="honesty_dec.html">Honesty Declaration</a>
+							</div>
+					</div>
+					
+						
+						
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 id="home1"">
+							<div class="banner ">
+								<img src="images/whale.jpg">
+							</div>
+						</div>
+					
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 midpage" id="aboutus1">
+								<h2>About Whales</h2>
+						</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 aboutus">
+									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 photo">
+										<img src="images/whalefly.jpg">
+									</div>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 abouttext">
+									<h3>Since 50 Million's Year Ago</h3>
+
+									<p>Cetaceans (whales, dolphins, and porpoises) are an order of mammals that originated about 50 million years ago in the Eocene epoch. Even though all modern cetaceans are obligate aquatic mammals, early cetaceans were amphibious, and their ancestors were terrestrial artiodactyls, similar to small deer. The transition from land to water is documented by a series of intermediate fossils, many of which are known from India and Pakistan. We review raoellid artiodactyls, as well as the earliest families of cetaceans: pakicetids, ambulocetids, remingtonocetids, protocetids, and basilosaurids. We focus on the evolution of cetacean organ systems, as these document the transition from land to water in detail.</p>
+									<h3>Modern Day Whales</h3>
+
+									<p>Around 40 million years ago, the archaeocetes began to diversify and evolve into the two main groups of modern whales: the toothed whales (odontocetes) and the baleen whales (mysticetes). The toothed whales, which include dolphins and sperm whales, have teeth and use echolocation to navigate and hunt Whales, the largest creatures on Earth, inhabit the vast expanses of the world's oceans, captivating humanity with their sheer size, grace, and mystique. From the colossal blue whale to the acrobatic humpback and the enigmatic sperm whale, these marine mammals navigate the depths with astonishing agility and intelligence. Whales are highly social beings, often traveling in pods and communicating through a diverse array of vocalizations, including haunting songs that echo across the ocean's expanse...</p>
+								</div>
+							</div>
+
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xd-12 section3" id="gallery1">
+								<h2>Gallery</h2>
+									<div class="gallery">
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 galleryimage">
+											<img src="images/5.jpg">
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 galleryimage">
+											<img src="images/h.jpg">
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 galleryimage">
+											<img src="images/3.jpg">
+										</div>
+									</div>
+										<div class="gallery">
+											<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 galleryimage">
+												<img src="images/1.jpg">
+											</div>
+												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 galleryimage">
+													<img src="images/2.jpg">
+												</div>
+													<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 galleryimage">
+														<img src="images/3.jpg">
+													</div>
+													
+										</div>
+							</div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xd-12 section3" id="faq1">
+									<h2>Frequently Asked Questions</h2>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xd-12 blogs">
+											<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 article">
+													<p>Q: How long can whales hold their breath?<br>
+                                                       A: The duration varies among species, but some whales, like sperm whales, can hold their breath for up to 90 minutes, while others, like humpback whales, typically stay submerged for about 15-30 minutes.</p>
+														<button>read more</button>
+											</div>
+											
+											<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 article">
+										
+													<p>Q: How do whales communicate with each other?<br>
+                                                     A: Whales communicate through a variety of methods, including vocalizations such as songs, clicks, and whistles. These sounds can travel long distances underwater and are crucial for navigation, finding food, and social interactions.</p>
+														<button>read more</button>			
+											</div>
+											<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 article">
+														<p>Q: Do whales have teeth?<br>
+                                                         A: Some whale species have teeth, while others have baleen plates instead. Toothed whales, such as sperm whales and killer whales, while baleen whales, like humpback and blue whales, use their baleen plates to filter small organisms like krill from the water..</p>
+														<button>read more</button>
+											</div>
+
+										</div>
+									<p>
+										<h2>Video</h2>
+										<div class="video">
+											<video width="1000" height="400" autoplay
+											 source src="Dolphins_ How Smart are They Actually_ _  Inside the Animal Mind _ BBC Earth.mp4" controls muted loop></video> 
+											</div> 
+									</p>
+								</div>	
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xd-12 section3" id="contact1">
+										<h2>Contact Us</h2>
+
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xd-12 contact-us">
+											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 midtext">
+												<img src="images/map.jpg">
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contactbutton">
+												
+												<p>Thank you for your interest in Whales. We welcome your inquiries, feedback, and suggestions. Please feel free to reach out to us using any of the following methods.<br><br> If you have questions or need assistance with our products or services, please contact our customer support team.:.</p>
+											<h3>For More Details:</h3>
+													<p>Email:<a href="email">sachin@gmail.com</a><br>
+													   Email:<a href="email">rupinder@gmail.com</a><br>
+													   Email:<a href="email">saganpreet@gmail.com</a></p>
+													<p>Contact:<a href=tel:5151515151">5151515151</a><br>
+														Contact:<a href=tel:7985696734">7985696734</a><br>
+														Contact:<a href=tel:5759384671">5759384671</a></p>
+											
+											</div>
+										</div>
+									</div>			
+
+
+
+
+												<div class="footer">
+														
+													<p>Copy Right:<a href="#">sachin, rupinder, saganpreet</a></p>
+													<p><a href="#">Privacy Policy</a></p>
+													<p><a href="#">Terms and Conditions</a></p>	
+		</div>										</div>
+															
+	</div>
+</body>
+</html>
